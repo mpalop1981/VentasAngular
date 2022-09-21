@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Nuevo usuario</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Nombre: </mat-label>
+        <input matInput [(ngModel)]="nombre">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="addCliente()">Guardar</button>
+</div>
