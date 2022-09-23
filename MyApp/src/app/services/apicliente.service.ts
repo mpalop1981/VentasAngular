@@ -15,7 +15,7 @@ const httpOptions = {
 })
 export class ApiclienteService {
 
-  url: string = 'http://localhost:14408/api/cliente/';
+  url: string = 'http://localhost:14408/api/cliente';
 
   constructor(
     private _http: HttpClient
@@ -29,4 +29,12 @@ export class ApiclienteService {
     return this._http.post<Response>(this.url, cliente, httpOptions);
   }
 
+  editClientes(cliente: cliente): Observable<Response>{
+    return this._http.put<Response>(this.url, cliente, httpOptions);
+  }
+
+  
+  deleteClientes(id: number): Observable<Response>{
+    return this._http.delete<Response>(`${this.url}/${id}`);
+  }
 }

@@ -16,13 +16,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { DialogDeleteComponent } from './common/delete/dialogdelete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ClienteComponent,
-    DialogClienteComponent
+    DialogClienteComponent,
+    DialogDeleteComponent
   ],
   imports: [
     BrowserModule,
